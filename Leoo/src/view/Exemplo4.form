@@ -82,18 +82,24 @@
   <SubComponents>
     <Component class="javax.swing.JCheckBox" name="jCkBIngles">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ingl&#xea;s"/>
+        <Property name="text" type="java.lang.String" value="Java"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCkBInglesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="jCkBInformatica">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Inform&#xe1;tica"/>
+        <Property name="text" type="java.lang.String" value="Banco de Dados"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVerificar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Verificar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVerificarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnDesmarcar">
       <Properties>

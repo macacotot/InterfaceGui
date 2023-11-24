@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ferre
@@ -37,11 +39,21 @@ public class Exemplo4 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jCkBIngles.setText("Inglês");
+        jCkBIngles.setText("Java");
+        jCkBIngles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCkBInglesActionPerformed(evt);
+            }
+        });
 
-        jCkBInformatica.setText("Informática");
+        jCkBInformatica.setText("Banco de Dados");
 
         jBtnVerificar.setText("Verificar");
+        jBtnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVerificarActionPerformed(evt);
+            }
+        });
 
         jBtnDesmarcar.setText("Desmarcar");
         jBtnDesmarcar.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +125,24 @@ public class Exemplo4 extends javax.swing.JFrame {
         jCkBInformatica.setSelected(false);
         jCkBIngles.setSelected(false);
     }//GEN-LAST:event_jBtnDesmarcarActionPerformed
+
+    private void jBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVerificarActionPerformed
+        String selecao = "Selecionados";
+        if(jCkBIngles.isSelected()){
+            selecao+="\n"+jCkBIngles.getText();
+        }
+        if(jCkBInformatica.isSelected()){
+            selecao+="\n"+jCkBInformatica.getText();
+        }
+        if(!jCkBIngles.isSelected()&&(!jCkBInformatica.isSelected())){
+            JOptionPane.showMessageDialog(null, "Nenhum Curso selecionado!");
+        }else
+        JOptionPane.showMessageDialog(null, selecao);
+    }//GEN-LAST:event_jBtnVerificarActionPerformed
+
+    private void jCkBInglesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCkBInglesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCkBInglesActionPerformed
 
     /**
      * @param args the command line arguments
