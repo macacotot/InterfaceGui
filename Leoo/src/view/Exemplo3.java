@@ -45,6 +45,7 @@ public class Exemplo3 extends javax.swing.JFrame {
         });
 
         jBtnTeimoso.setText("Teimoso");
+        jBtnTeimoso.setToolTipText("");
         jBtnTeimoso.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jBtnTeimosoMouseEntered(evt);
@@ -65,6 +66,11 @@ public class Exemplo3 extends javax.swing.JFrame {
 
         jMenu2.setMnemonic('s');
         jMenu2.setText("Sair");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -74,32 +80,39 @@ public class Exemplo3 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jBtnMensagem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addComponent(jBtnTeimoso)
-                .addGap(57, 57, 57))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(217, Short.MAX_VALUE)
+                .addComponent(jBtnMensagem)
+                .addGap(43, 43, 43))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnMensagem)
-                    .addComponent(jBtnTeimoso))
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addGap(36, 36, 36)
+                .addComponent(jBtnMensagem)
+                .addGap(91, 91, 91)
+                .addComponent(jBtnTeimoso)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jMenu2MouseClicked
+
     private void jBtnMensagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMensagemActionPerformed
-        JOptionPane.showMessageDialog(null, "Você clicou no botão Mensagem");
+        JOptionPane.showMessageDialog(null, "Você clicou no botão mensagem");
     }//GEN-LAST:event_jBtnMensagemActionPerformed
 
     private void jBtnTeimosoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnTeimosoActionPerformed
-        JOptionPane.showMessageDialog(null, "Você clicou no botão Teimoso >:c ");
+        JOptionPane.showMessageDialog(null, "Você clicou no botão teiomoso!");
     }//GEN-LAST:event_jBtnTeimosoActionPerformed
 
     private void jBtnTeimosoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnTeimosoMouseEntered
@@ -107,7 +120,7 @@ public class Exemplo3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnTeimosoMouseEntered
 
     private void jBtnTeimosoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnTeimosoMouseExited
-        jBtnTeimoso.setBounds(40, 70, 100, 25);
+        jBtnTeimoso.setBounds(50, 70, 100, 25);
     }//GEN-LAST:event_jBtnTeimosoMouseExited
 
     /**

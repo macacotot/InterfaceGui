@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ferre
+ * @author Geral
  */
 public class Exemplo4 extends javax.swing.JFrame {
 
@@ -28,37 +28,36 @@ public class Exemplo4 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jCkBIngles = new javax.swing.JCheckBox();
-        jCkBInformatica = new javax.swing.JCheckBox();
+        jCkbIngles = new javax.swing.JCheckBox();
+        jCkbInformatica = new javax.swing.JCheckBox();
         jBtnVerificar = new javax.swing.JButton();
-        jBtnDesmarcar = new javax.swing.JButton();
         jBtnMarcar = new javax.swing.JButton();
+        jBtnDesmarcar = new javax.swing.JButton();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 30), new java.awt.Dimension(0, 30), new java.awt.Dimension(32767, 30));
         jMenuBar1 = new javax.swing.JMenuBar();
-        JMenuArquivo = new javax.swing.JMenu();
-        jMenuSair = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jCkBIngles.setText("Java");
-        jCkBIngles.addActionListener(new java.awt.event.ActionListener() {
+        jCkbIngles.setText("Java");
+        jCkbIngles.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCkBInglesActionPerformed(evt);
+                jCkbInglesActionPerformed(evt);
             }
         });
 
-        jCkBInformatica.setText("Banco de Dados");
+        jCkbInformatica.setText("Banco De Dados");
+        jCkbInformatica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCkbInformaticaActionPerformed(evt);
+            }
+        });
 
         jBtnVerificar.setText("Verificar");
         jBtnVerificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBtnVerificarActionPerformed(evt);
-            }
-        });
-
-        jBtnDesmarcar.setText("Desmarcar");
-        jBtnDesmarcar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnDesmarcarActionPerformed(evt);
             }
         });
 
@@ -69,13 +68,19 @@ public class Exemplo4 extends javax.swing.JFrame {
             }
         });
 
-        JMenuArquivo.setMnemonic('a');
-        JMenuArquivo.setText("Arquivo");
-        jMenuBar1.add(JMenuArquivo);
+        jBtnDesmarcar.setText("Desmarcar");
+        jBtnDesmarcar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnDesmarcarActionPerformed(evt);
+            }
+        });
 
-        jMenuSair.setMnemonic('s');
-        jMenuSair.setText("Sair");
-        jMenuBar1.add(jMenuSair);
+        jMenu1.setText("Arquivo");
+        jMenu1.setToolTipText("Botão de Arquivo");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Sair");
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -83,66 +88,89 @@ public class Exemplo4 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(jCkBIngles)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCkBInformatica)
-                .addGap(67, 67, 67))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jBtnVerificar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
-                .addComponent(jBtnMarcar)
-                .addGap(59, 59, 59)
-                .addComponent(jBtnDesmarcar)
-                .addGap(23, 23, 23))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCkbIngles, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCkbInformatica)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jBtnDesmarcar)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jBtnMarcar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jBtnVerificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(58, 58, 58))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCkBIngles)
-                    .addComponent(jCkBInformatica))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnVerificar)
-                    .addComponent(jBtnMarcar)
-                    .addComponent(jBtnDesmarcar))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCkbIngles)
+                            .addComponent(jBtnVerificar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCkbInformatica)
+                            .addComponent(jBtnMarcar)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBtnDesmarcar)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jCkbInglesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCkbInglesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCkbInglesActionPerformed
+
     private void jBtnMarcarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMarcarActionPerformed
-        jCkBInformatica.setSelected(true);
-        jCkBIngles.setSelected(true);
+        jCkbInformatica.setSelected(true);
+        jCkbIngles.setSelected(true);
     }//GEN-LAST:event_jBtnMarcarActionPerformed
 
     private void jBtnDesmarcarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDesmarcarActionPerformed
-        jCkBInformatica.setSelected(false);
-        jCkBIngles.setSelected(false);
+        jCkbInformatica.setSelected(false);
+        jCkbIngles.setSelected(false);
     }//GEN-LAST:event_jBtnDesmarcarActionPerformed
 
     private void jBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVerificarActionPerformed
-        String selecao = "Selecionados";
-        if(jCkBIngles.isSelected()){
-            selecao+="\n"+jCkBIngles.getText();
+        // TODO add your handling code here:
+        String selecao = "Selecionados: ";
+        if(jCkbIngles.isSelected()){
+            selecao += "\n"+jCkbIngles.getText();
         }
-        if(jCkBInformatica.isSelected()){
-            selecao+="\n"+jCkBInformatica.getText();
+
+        if(jCkbIngles.isSelected()){
+            selecao += "\n"+jCkbInformatica.getText();
         }
-        if(!jCkBIngles.isSelected()&&(!jCkBInformatica.isSelected())){
-            JOptionPane.showMessageDialog(null, "Nenhum Curso selecionado!");
-        }else
-        JOptionPane.showMessageDialog(null, selecao);
+        
+        
+        
+        if((!jCkbIngles.isSelected()) && (!jCkbInformatica.isSelected())){
+        JOptionPane.showMessageDialog(null, "nenhum curso selecionado");
+    }else{
+            JOptionPane.showMessageDialog(null, selecao);
+        }
+       
     }//GEN-LAST:event_jBtnVerificarActionPerformed
 
-    private void jCkBInglesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCkBInglesActionPerformed
+    private void jCkbInformaticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCkbInformaticaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCkBInglesActionPerformed
+    }//GEN-LAST:event_jCkbInformaticaActionPerformed
+
+
 
     /**
      * @param args the command line arguments
@@ -151,7 +179,7 @@ public class Exemplo4 extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -180,13 +208,14 @@ public class Exemplo4 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu JMenuArquivo;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JButton jBtnDesmarcar;
     private javax.swing.JButton jBtnMarcar;
     private javax.swing.JButton jBtnVerificar;
-    private javax.swing.JCheckBox jCkBInformatica;
-    private javax.swing.JCheckBox jCkBIngles;
+    private javax.swing.JCheckBox jCkbInformatica;
+    private javax.swing.JCheckBox jCkbIngles;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuSair;
     // End of variables declaration//GEN-END:variables
 }

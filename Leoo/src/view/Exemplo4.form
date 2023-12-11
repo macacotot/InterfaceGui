@@ -4,15 +4,14 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="JMenuArquivo">
+        <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
-            <Property name="mnemonic" type="int" value="97"/>
             <Property name="text" type="java.lang.String" value="Arquivo"/>
+            <Property name="toolTipText" type="java.lang.String" value="Bot&#xe3;o de Arquivo"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenuSair">
+        <Menu class="javax.swing.JMenu" name="jMenu2">
           <Properties>
-            <Property name="mnemonic" type="int" value="115"/>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
         </Menu>
@@ -20,12 +19,12 @@
     </Menu>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -42,56 +41,75 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-              <Component id="jCkBIngles" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
-              <Component id="jCkBInformatica" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="jBtnVerificar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="65" max="32767" attributes="0"/>
-              <Component id="jBtnMarcar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-              <Component id="jBtnDesmarcar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jCkbIngles" min="-2" pref="85" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jCkbInformatica" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <Component id="filler1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jBtnDesmarcar" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jBtnMarcar" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="jBtnVerificar" alignment="1" min="-2" pref="85" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jCkBIngles" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jCkBInformatica" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jCkbIngles" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnVerificar" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jCkbInformatica" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jBtnMarcar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                      <Component id="filler1" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jBtnVerificar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBtnMarcar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBtnDesmarcar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="137" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jBtnDesmarcar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="160" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JCheckBox" name="jCkBIngles">
+    <Component class="javax.swing.JCheckBox" name="jCkbIngles">
       <Properties>
         <Property name="text" type="java.lang.String" value="Java"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCkBInglesActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCkbInglesActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="jCkBInformatica">
+    <Component class="javax.swing.JCheckBox" name="jCkbInformatica">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Banco de Dados"/>
+        <Property name="text" type="java.lang.String" value="Banco De Dados"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCkbInformaticaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnVerificar">
       <Properties>
@@ -99,6 +117,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnVerificarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBtnMarcar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Marcar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnMarcarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnDesmarcar">
@@ -109,13 +135,21 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnDesmarcarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jBtnMarcar">
+    <Component class="javax.swing.Box$Filler" name="filler1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Marcar"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[32767, 30]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[0, 30]"/>
+        </Property>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[0, 30]"/>
+        </Property>
       </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnMarcarActionPerformed"/>
-      </Events>
+      <AuxValues>
+        <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.VerticalStrut"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

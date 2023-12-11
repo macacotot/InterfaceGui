@@ -30,10 +30,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMnArquivo = new javax.swing.JMenu();
         jImnExemplo3 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         Sair = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sistema de Cadastro - Tela Principal");
 
         jMnArquivo.setMnemonic('a');
@@ -47,7 +49,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jImnExemplo3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_3, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jImnExemplo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/java.gif"))); // NOI18N
         jImnExemplo3.setMnemonic('3');
-        jImnExemplo3.setText("Exemplo");
+        jImnExemplo3.setText("Exemplo 3");
         jImnExemplo3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jImnExemplo3ActionPerformed(evt);
@@ -56,12 +58,38 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMnArquivo.add(jImnExemplo3);
 
         jMenuItem1.setText("Exemplo 4");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMnArquivo.add(jMenuItem1);
+
+        jMenu1.setText("Exemplo 5");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMnArquivo.add(jMenu1);
+
+        jMenu3.setText("Exemplo 6");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMnArquivo.add(jMenu3);
 
         jMenuBar1.add(jMnArquivo);
 
         jMenu2.setMnemonic('b');
         jMenu2.setText("Sobre");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         Sair.setMnemonic('s');
@@ -94,14 +122,36 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Exemplo3 tela = new Exemplo3();
         tela.setVisible(true);
     }//GEN-LAST:event_jImnExemplo3ActionPerformed
-                  
+     
+    
     private void SairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SairMouseClicked
        System.exit(0);
     }//GEN-LAST:event_SairMouseClicked
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        Exemplo4 tela = new Exemplo4();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        Sobre tela = new Sobre();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenu2MouseClicked
+
     private void jMnArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMnArquivoActionPerformed
-        // TODO add your handling code here:
+        Exemplo4 tela = new Exemplo4();
+        tela.setVisible(true);
     }//GEN-LAST:event_jMnArquivoActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        Exemplo5 tela = new Exemplo5();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+       Exemplo6 tela = new Exemplo6();
+       tela.setVisible(true);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -141,7 +191,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu Sair;
     private javax.swing.JMenuItem jImnExemplo3;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu jMnArquivo;

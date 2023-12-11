@@ -15,6 +15,9 @@
             <Property name="mnemonic" type="int" value="115"/>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenu2MouseClicked"/>
+          </Events>
         </Menu>
       </SubComponents>
     </Menu>
@@ -43,23 +46,25 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-              <Component id="jBtnMensagem" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="68" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
               <Component id="jBtnTeimoso" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="217" max="32767" attributes="0"/>
+              <Component id="jBtnMensagem" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jBtnMensagem" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jBtnTeimoso" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="173" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="jBtnMensagem" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+              <Component id="jBtnTeimoso" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -79,6 +84,7 @@
     <Component class="javax.swing.JButton" name="jBtnTeimoso">
       <Properties>
         <Property name="text" type="java.lang.String" value="Teimoso"/>
+        <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBtnTeimosoMouseEntered"/>

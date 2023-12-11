@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ferre
+ * @author Geral
  */
 public class Exemplo5 extends javax.swing.JFrame {
 
@@ -33,7 +33,8 @@ public class Exemplo5 extends javax.swing.JFrame {
         jRBtnFeminino = new javax.swing.JRadioButton();
         jBtnVerificar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 102, 255));
 
         buttonGroup1.add(jRBtnMasculino);
         jRBtnMasculino.setText("Masculino");
@@ -53,35 +54,40 @@ public class Exemplo5 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBtnVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jRBtnFeminino)
-                        .addComponent(jRBtnMasculino))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jBtnVerificar)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jRBtnFeminino, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGap(37, 37, 37)
+                            .addComponent(jRBtnMasculino, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(43, 43, 43)
                 .addComponent(jRBtnMasculino)
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jRBtnFeminino)
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addComponent(jBtnVerificar)
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBtnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVerificarActionPerformed
+        // TODO add your handling code here:
         if(jRBtnMasculino.isSelected()){
-            JOptionPane.showMessageDialog(null, "Masculino selecionado!");
-        }else if(jRBtnFeminino.isSelected()){JOptionPane.showMessageDialog(null, "Feminino selecionado!");
+            JOptionPane.showMessageDialog(null, "Masculino Secionado");
+        }else if(jRBtnFeminino.isSelected()){
+          JOptionPane.showMessageDialog(null, "Feminino Selecionado");
+        }
     }//GEN-LAST:event_jBtnVerificarActionPerformed
 
     /**

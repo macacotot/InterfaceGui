@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ferre
+ * @author Geral
  */
 public class Exemplo7 extends javax.swing.JFrame {
 
@@ -28,14 +28,31 @@ public class Exemplo7 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        button1 = new java.awt.Button();
+        jLblValor = new javax.swing.JLabel();
+        jTxtValor = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLstDesconto = new javax.swing.JList<>();
-        jTxtValor = new javax.swing.JTextField();
-        jTxtResult = new javax.swing.JTextField();
         jBtnCalcular = new javax.swing.JButton();
-        jLblValor = new javax.swing.JLabel();
+        jTxtResult = new javax.swing.JTextField();
+        canvas1 = new java.awt.Canvas();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        button1.setLabel("button1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLblValor.setText("Valor");
+
+        jTxtValor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtValorActionPerformed(evt);
+            }
+        });
 
         jLstDesconto.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "10%", "20%", "30%", "40%", "50%" };
@@ -44,18 +61,6 @@ public class Exemplo7 extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jLstDesconto);
 
-        jTxtValor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtValorActionPerformed(evt);
-            }
-        });
-
-        jTxtResult.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTxtResultActionPerformed(evt);
-            }
-        });
-
         jBtnCalcular.setText("Calcular");
         jBtnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,70 +68,46 @@ public class Exemplo7 extends javax.swing.JFrame {
             }
         });
 
-        jLblValor.setText("Valor");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTxtResult, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jBtnCalcular))
-                    .addComponent(jLblValor)
-                    .addComponent(jTxtValor)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTxtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jBtnCalcular)
+                        .addComponent(jTxtValor, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1)
+                        .addComponent(jLblValor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(116, 116, 116))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLblValor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jLblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(jTxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addComponent(jTxtResult, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jBtnCalcular)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTxtResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtResultActionPerformed
-     if(jTxtValor.getText().equals("")){
-         jTxtValor.requestFocus();
-         return;
-     }
-     try {
-        float valor = Float.parseFloat(jTxtValor.getText());
-        if(jLstDesconto.getSelectedIndex()== -1){
-            JOptionPane.showMessageDialog(null, "Selecione um item da lista!");
-        }
-        float pDesconto = (float) 0.9;
-        if(jLstDesconto.getSelectedIndex()== 1){
-            pDesconto = 0.8f;
-        }
-        if(jLstDesconto.getSelectedIndex()== 2){
-            pDesconto = 0.7f;
-        }
-        if(jLstDesconto.getSelectedIndex()== 3){
-            pDesconto = 0.6f;
-        }
-        if(jLstDesconto.getSelectedIndex()== 4){
-            pDesconto = 0.5f;
-        }
-        jTxtResult.setText(""+ valor*pDesconto);
-    } catch (Exception e) {
-    }
-    }//GEN-LAST:event_jTxtResultActionPerformed
 
     private void jTxtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtValorActionPerformed
         // TODO add your handling code here:
@@ -134,7 +115,37 @@ public class Exemplo7 extends javax.swing.JFrame {
 
     private void jBtnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCalcularActionPerformed
         // TODO add your handling code here:
+        if(jTxtValor.getText().equals("")){
+            jTxtValor.requestFocus();
+            return;
+        }
+        try {
+            
+            float valor = Float.parseFloat(jTxtValor.getText());
+            if(jLstDesconto.getSelectedIndex() == -1){
+              JOptionPane.showMessageDialog(null, "Selecione um item da lista");
+            }
+            float pDesconto = 0.9f;
+            if(jLstDesconto.getSelectedIndex() == 1){
+                pDesconto = 0.8f;
+            }
+            if(jLstDesconto.getSelectedIndex() == 2){
+                pDesconto = 0.7f;
+            }
+            if(jLstDesconto.getSelectedIndex() == 3){
+                pDesconto = 0.6f;
+            }
+            if(jLstDesconto.getSelectedIndex() == 4){
+                pDesconto = 0.5f;
+            }
+            jTxtResult.setText(""+valor*pDesconto);
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_jBtnCalcularActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,6 +183,8 @@ public class Exemplo7 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private java.awt.Button button1;
+    private java.awt.Canvas canvas1;
     private javax.swing.JButton jBtnCalcular;
     private javax.swing.JLabel jLblValor;
     private javax.swing.JList<String> jLstDesconto;
